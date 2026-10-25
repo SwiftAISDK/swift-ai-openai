@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packages": [
+    {
+      "name": "@ai-sdk/openai",
+      "reviewedVersion": "4.0.102",
+      "ledgerKind": "provider",
+      "evidence": "`AIProviders.openAI`, `OpenAICompatible*Model`, `OpenAITools`, `OpenAI*Tests.swift`, `FileAndSkillClientTests.swift`, `CoreOpenAIUpstream202609Tests.swift`, `OpenAIResponsesBatchV4UpstreamTests.swift`",
+      "reviewStatus": "imported-reviewed-with-gaps",
+      "archiveIntegrity": "sha512-8hvs5UO6OgGSR0HASptyopqoJYgdCccVfksUlBLeJ8/h2KoKYU2ZiFjArOkS6ciJbmnDz3G+Zoo4KiI4rlQSoA==",
+      "sourceRef": "npm:@ai-sdk/openai@4.0.102",
+      "testRef": "682e2dd71456f14f9da33a1b983d1998c3a1184c",
+      "testRefRelationship": "inventory-snapshot-not-release-verified",
+      "contractFamilies": [
+        "ProviderV4",
+        "LanguageModelV4",
+        "EmbeddingModelV4",
+        "ImageModelV4"
+      ],
+      "contractReview": "M5 pinned published declarations reviewed; native Swift protocols and typed factories are the compatibility contract. Retain existing behavior and documented gaps. npm gitHead absent; test snapshot is not matching-release evidence. See Docs/Migration/M5/upstream-review.json."
+    }
+  ]
+}

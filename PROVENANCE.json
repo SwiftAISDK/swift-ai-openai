@@ -1,0 +1,417 @@
+{
+  "schemaVersion": 1,
+  "package": "swift-ai-openai",
+  "version": "1.0.0",
+  "releaseID": "modular-pilot",
+  "source": {
+    "commit": "f91f47882ebaba0d602474fdd5ddc9f249eecce2",
+    "baseCommit": "f91f47882ebaba0d602474fdd5ddc9f249eecce2",
+    "workingTree": false,
+    "inputsSHA256": "9c1a85dfc8ba0dcbd4490ba630563ccf8f4888c8d4443f04fe0ccd406af10dda"
+  },
+  "dependencies": [
+    {
+      "package": "swift-ai-core",
+      "from": "1.0.0"
+    },
+    {
+      "package": "swift-ai-openai-compatible",
+      "from": "1.0.0"
+    }
+  ],
+  "changes": [
+    {
+      "id": "modular-pilot",
+      "notes": "Standalone OpenAI Responses, chat, media, Live, batches, files and skills, sharing compatible wire implementations.",
+      "compatibility": "New release unit at 1.0.0; native OpenAIProvider is explicit, while the old facade retains its previous concrete return type."
+    }
+  ],
+  "canonicalDirectory": "Packages/swift-ai-openai",
+  "upstream": [
+    {
+      "name": "@ai-sdk/openai",
+      "reviewedVersion": "4.0.102",
+      "ledgerKind": "provider",
+      "evidence": "`AIProviders.openAI`, `OpenAICompatible*Model`, `OpenAITools`, `OpenAI*Tests.swift`, `FileAndSkillClientTests.swift`, `CoreOpenAIUpstream202609Tests.swift`, `OpenAIResponsesBatchV4UpstreamTests.swift`",
+      "reviewStatus": "imported-reviewed-with-gaps",
+      "archiveIntegrity": "sha512-8hvs5UO6OgGSR0HASptyopqoJYgdCccVfksUlBLeJ8/h2KoKYU2ZiFjArOkS6ciJbmnDz3G+Zoo4KiI4rlQSoA==",
+      "sourceRef": "npm:@ai-sdk/openai@4.0.102",
+      "testRef": "682e2dd71456f14f9da33a1b983d1998c3a1184c",
+      "testRefRelationship": "inventory-snapshot-not-release-verified",
+      "contractFamilies": [
+        "ProviderV4",
+        "LanguageModelV4",
+        "EmbeddingModelV4",
+        "ImageModelV4"
+      ],
+      "contractReview": "M5 pinned published declarations reviewed; native Swift protocols and typed factories are the compatibility contract. Retain existing behavior and documented gaps. npm gitHead absent; test snapshot is not matching-release evidence. See Docs/Migration/M5/upstream-review.json."
+    }
+  ],
+  "note": "Independent port. Imported test refs and contract review gaps retain their original status; export is not new upstream parity proof.",
+  "canonicalInputs": [
+    {
+      "canonicalPath": ".github/workflows/package-check.yml",
+      "sha256": "7ff448e130f7aed96c38accdf828b6d993997ebc5317358347e9a70a649e67ca"
+    },
+    {
+      "canonicalPath": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Package.swift",
+      "sha256": "0c1218ae5a1c27615122af6d088eccf34e63482dfa2b9463ab9a92ae4416b3e5"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Porting/map.json",
+      "sha256": "e141461ff4f368b6787c82c747714348244661243f885a30a69c0e93da150c40"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/README.md",
+      "sha256": "b04b04f8313cbc3e4d5c17d5b886f1a24019ed14ef822028c86f40ef61706dc6"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAIAudioModels.swift",
+      "sha256": "4af65aa0b99a680a15ebbfdf9e4b9c19cf688adb9db26a09dca6bc7b6eccc031"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAICompatibleMetadata.swift",
+      "sha256": "d965e655bf15b2cd5103016c361e1b69cf6ba69932389e47ede5b25bcedc9089"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAIConfiguration.swift",
+      "sha256": "71d0bd67ecf3c316eb4301e8bb68cf8cfda565517ed5ddbaeaebf38027603af8"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAIDecisionModel.swift",
+      "sha256": "e77081c739e16005e93cf3ebc464360c5541febf4025426f892f31d9481d8224"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAIFiles.swift",
+      "sha256": "0bd63b2cae7c4bafd04b03362bf6f4e405ff0c231a5b604ba7863785aae5169c"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAIImageMetadata.swift",
+      "sha256": "2758be1fd5597eca13a94f7c31a136457a41bcd39bd7439bc6c8d6ed1bcfc531"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAILiveModel.swift",
+      "sha256": "134ad5d6bbb4d3c13a5db2ad1e6367e84859a13df3941dec283d823d3d0cef55"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAIOptions.swift",
+      "sha256": "c4bc0b549c54c12b49f8ad1bad57e70f1631273feaaefcd166b13eb9ac9a350a"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAIProvider.swift",
+      "sha256": "2de46cb082e2696f0395670a584104ca1ad4dea2a5a482270f292f0581617336"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAIResponsesBatchLanguageModel.swift",
+      "sha256": "033b891f8e28b2db35a0a10a58466df482befb4ced7a7ec9b2cd9a2244d48e54"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAIResponsesInput.swift",
+      "sha256": "58b662b69e8951fc7945ddbf139d64446189f160425c5306530346d5ceb3cf58"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAIResponsesModel.swift",
+      "sha256": "28df8b487e5319b673766443122850ff08125bccf3eae2708d6f41b12b2f68bf"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAIResponsesOptions.swift",
+      "sha256": "7083b28e1da50c67ea0abfa9bc02fe23959211d8f808da72efdabe1ac0e6ba59"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAIResponsesParallelToolCalls.swift",
+      "sha256": "2e51b8d69063dc2d3fabba6ad08a982254b9f4503ffd284072b4aa84d13103bf"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAIResponsesParsing.swift",
+      "sha256": "b04e7e98df5651d9e969c6804c5a00f67c8d8fb7e8e1f72666962f29ddf3a5e1"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAIResponsesStreaming.swift",
+      "sha256": "a87398b98411b7eb17f984606b9df55171fad94155131b875240925fe2cd0070"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAIResponsesTools.swift",
+      "sha256": "3f14e0e04613e3110ef0ecc0f58a5d66f7e7f2801d83306eb1b97a37f4bac216"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAISkills.swift",
+      "sha256": "e8a81a0932c55ffd80a358d5ca7ef5e72516fbb517ae272c090897ae554931cd"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAIStreamErrors.swift",
+      "sha256": "86226dd154afc5644a4c860c7f78dd2a913c997316d5bd90779242a534fbfcda"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAITools.swift",
+      "sha256": "18130262de0acb9577c36e30a276f7e1e53150e122c0e656d243c40049a0a955"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/FixtureDownloadTransport.swift",
+      "sha256": "ced26ef3b5f223eab14c12d17692c1eb5430482872a0c1f3eb41a0289a09db75"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/Fixtures/OpenAIResponses/openai-apply-patch-tool-delete.1.chunks.txt",
+      "sha256": "4140b19cd5a8dad9760b73c80d960f65aedad0ad643e3892f519db72fe34b168"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/Fixtures/OpenAIResponses/openai-apply-patch-tool.1.chunks.txt",
+      "sha256": "88bfca2f26bcf6c44a0e559e3f89d1357cb33b577a0c7d20b93f5b6bd212814d"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/Fixtures/OpenAIResponses/openai-client-tool-search.1.chunks.txt",
+      "sha256": "ff9a930622fcf1c5a899f04583a0b5df34a06123f445bd0313ae8fe171649eaa"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/Fixtures/OpenAIResponses/openai-client-tool-search.2.chunks.txt",
+      "sha256": "9e38a165bd0fae6264a1ceb90172151131f3e1c86302a46ece5f5d0affcabc18"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/Fixtures/OpenAIResponses/openai-code-interpreter-tool.1.chunks.txt",
+      "sha256": "2907e69401c95a1c32bf495032c0bb4916a41b80d4a8cd49cbf97b2570633d84"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/Fixtures/OpenAIResponses/openai-compaction.1.json",
+      "sha256": "7d8ad251abc6711912e6cc11539a526fa96bf5718a16ef44d6b38d8bda31e316"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/Fixtures/OpenAIResponses/openai-error.1.chunks.txt",
+      "sha256": "9046a4b9521a02eec098359b70bf8cc89ef1e5338375f91618c73cb650132b25"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/Fixtures/OpenAIResponses/openai-file-search-tool.1.chunks.txt",
+      "sha256": "8a315cfa53dbe541e23aa91b35947ff11fa1102674ce71bcde944f3b875f9b20"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/Fixtures/OpenAIResponses/openai-file-search-tool.2.chunks.txt",
+      "sha256": "0a4000963b51d9ecc95269ad4fb0622c6b4fe936e9a79b095854cfe8a5afeabc"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/Fixtures/OpenAIResponses/openai-image-generation-tool.1.chunks.txt",
+      "sha256": "7195d0ce37e222acdb7afcfe67252328386128b7ff13555ae80be4282879e500"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/Fixtures/OpenAIResponses/openai-local-shell-tool.1.chunks.txt",
+      "sha256": "20583eef6409e9a695fbc4fc3cbe8132c4be3b5d69a291393f4d7c83fe351b81"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/Fixtures/OpenAIResponses/openai-mcp-tool-approval.1.chunks.txt",
+      "sha256": "b525c00301e18bcbdbed49b6d2c9bc8f69cba9a8520b252bb5242c79d62f9fee"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/Fixtures/OpenAIResponses/openai-mcp-tool-approval.2.chunks.txt",
+      "sha256": "8b71a4124206ee7549cf3334e88501c89c36496b3577b97094cae29d8e84ad40"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/Fixtures/OpenAIResponses/openai-mcp-tool-approval.3.chunks.txt",
+      "sha256": "76fac37160ac333c77fe73c7f7c7ef4664b73862f88a0b40bce740897f70768d"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/Fixtures/OpenAIResponses/openai-mcp-tool-approval.4.chunks.txt",
+      "sha256": "e45960ba4f50536eee763c00b396c8d832c3eca3cbd57c8160e29ab75e1228c2"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/Fixtures/OpenAIResponses/openai-mcp-tool.1.chunks.txt",
+      "sha256": "3f4830c9ba95c2fe804dccb3b85ffdb2db3fa5ca1de480428423e8a044b3cd72"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/Fixtures/OpenAIResponses/openai-phase.1.chunks.txt",
+      "sha256": "7f5871feba09642b1c1e359878bbe8a75eda607da6dd9d553193e94d816c981c"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/Fixtures/OpenAIResponses/openai-phase.1.json",
+      "sha256": "9a19b8afe362cbab14b0b4a7dd3d6e4dc504b9ba1d230906bf8584a0d62a0db6"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/Fixtures/OpenAIResponses/openai-reasoning-encrypted-content.1.chunks.txt",
+      "sha256": "a1e8b0e752046299cafe44af4c5fcdcda5ceb9a9ee5c117304b39ef527a58edc"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/Fixtures/OpenAIResponses/openai-shell-container-multiturn.1.chunks.txt",
+      "sha256": "eda9b15fc6e8bc7867a78ce7640cf0f8f79606b9b5b3e5108b79a53b5dfc3987"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/Fixtures/OpenAIResponses/openai-shell-container.1.chunks.txt",
+      "sha256": "ef2797809ad604ce786b827640ca13a5cce1aa7de2c6025503b0581da42f2bb7"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/Fixtures/OpenAIResponses/openai-shell-local-multiturn.1.chunks.txt",
+      "sha256": "3cff2044e76e46327e6be89b367c474bac746d1ab3cd5b7c7ce97d88a36b5467"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/Fixtures/OpenAIResponses/openai-shell-skills.1.chunks.txt",
+      "sha256": "8e03d9d8d9255c53f8aa13e8a5c076f2a10d1e446fd25e40b9f958bc6f938d0b"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/Fixtures/OpenAIResponses/openai-shell-tool.1.chunks.txt",
+      "sha256": "6757a95f6f45cf7e2ca93a7b755a7792af378497944e88a4f518ac881e770d54"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/Fixtures/OpenAIResponses/openai-tool-search.1.chunks.txt",
+      "sha256": "985e48871f1fe39021d19de2d8de0244a8b2e1745f757920dcaf746bf2fc1725"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/Fixtures/OpenAIResponses/openai-web-search-tool.1.chunks.txt",
+      "sha256": "69b8900d858989347bc26844e79b476ceea46b8ba00fb4175a8991087d438a18"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/IncrementalLanguageStreamingTests.swift",
+      "sha256": "38b799c26373a9444beb30a3b786b7cfd9c127e9dacb4eb40036f70ce21456a1"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIChatLanguageModelUpstreamTests.swift",
+      "sha256": "2277a19cb8bd2d648c1b1af597a8a2f50af606d7f170f456cc9bc0d7c17c668d"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAILiveModelTests.swift",
+      "sha256": "5603d753bc432eaeb6f126308e15652b153f93ea6046c9442438b5fef039dc5a"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIMediaTests.swift",
+      "sha256": "9f654e37e174c49b95098364feb706ff05fc6c2b46f031ab0798772bc03ee160"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIProgrammaticAndForwardCompatibilityTests.swift",
+      "sha256": "66053d36eb096819c71d4adba7c6db87cfbf4e5b2a3ec18e64fdc4aec59bd427"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesBatchV4UpstreamTests.swift",
+      "sha256": "7502fb20761496326cd141cca9748a5c1676c16179bf707ebbe8ddff585a65c0"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesComputerV4UpstreamTests.swift",
+      "sha256": "f95bd22b375eb25733188b71468e8f2508ad088c29f88605f701ae8df1274ad9"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesConversationCompactionTests.swift",
+      "sha256": "60de18dce838a261737f7d608829337b1805baa39e4035b4bc31656fa1ee48fd"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesCustomOutputConversionTests.swift",
+      "sha256": "275c93f4a5fe79a95f19e2e21870987d581d09629e61a47c7ee1a6485fa9cc90"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesFunctionToolRequestMappingTests.swift",
+      "sha256": "2cf53971b93d27ed70404c3bb25bf93c1ec58a74331e26052b68d5fdc3cc7043"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesGenerateTests.swift",
+      "sha256": "91a762f5d25449048ba75ee96ef3eb53fd8a52ab1b665bfc9aacb7ac0a994986"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesHostedCodeAndImageToolsTests.swift",
+      "sha256": "7693c015d66c1b00113124d5b48e610fcb523ce97d473360e2592c6389b2e455"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesHostedFilePatchAndCustomToolsTests.swift",
+      "sha256": "36c0b78979f453afe1bc4b7f0739708e6e28f566e3851fdcd1bb8c3f4b2c9ef4"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesHostedMCPToolsTests.swift",
+      "sha256": "504a1e27f3222a90b227b876b63c51bde977f322c83e226faa8509b0e4e63997"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesHostedSearchAndShellToolsTests.swift",
+      "sha256": "f712561017885679d1c5b5139782351b3db790f25a8a1a2a14cd48f832157906"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesMessageConversionTests.swift",
+      "sha256": "640725acaaebe61820330976e226fd1e6c18abf54c57a8cf52b4490fddb3fc6e"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesParallelToolCallTests.swift",
+      "sha256": "6a0f20ce52efa5bed859780e7405c57139bb7e7a4a714ac086e3b771e759e8b9"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesProviderExecutedToolFilteringTests.swift",
+      "sha256": "79bb8525c09831678e522b5add4279cdb9c6852dc8d58fee216d93cdbb2d7344"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesProviderIdentityTests.swift",
+      "sha256": "043bcd9e14baf31da40bc20eb4a765cf0989ad863681572076843269da8e505a"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesRequestOptionsAndReasoningTests.swift",
+      "sha256": "6e170b4a94a48dc78bb7071f3d2d25bdfcf92542831b578cfc65649da4305a21"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesShellAndPatchToolResultConversionTests.swift",
+      "sha256": "07e8651d4c1c9b2bed742ff5d53a8dbb74a8801740e04472896fd717882a8571"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesStreamingCitationTests.swift",
+      "sha256": "0fc76a7cfe71c34d39f943f61f5b01a603c6a1ae55a5a8fed526ba30024f68b5"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesStreamingCodeAndImageFixturesTests.swift",
+      "sha256": "e3f404b54119669cf135db07e45580f366674cb34ebfed3eaabf02f088ec37fd"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesStreamingFileSearchFixturesTests.swift",
+      "sha256": "c35e8cbd58a241e079c63cd958f77ee1f2e3949dd8cdccc54c491becdbebf2e8"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesStreamingMCPFixturesTests.swift",
+      "sha256": "92f027aa3395655539bf028804dca723fb7623b8c290fdd42ac4937ee3868f74"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesStreamingMiscAndErrorsTests.swift",
+      "sha256": "1310a2b9fcb611b2e05ec17c134df26b64dc4c408ea49e5b9a958ea3f3c9de2b"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesStreamingReasoningTests.swift",
+      "sha256": "355e7685b02645b057cfe0ee128b1c80b5487348f91bd0226a7f29ab195deb2b"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesStreamingSearchTests.swift",
+      "sha256": "2c11dbdd673cad8a91d10809295a355417d94de370bb4e26ddf70734bb2500c6"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesStreamingShellFixturesTests.swift",
+      "sha256": "7a113c2d669f120d5e220e36091214bac1979a42c5c26ca0e097a45f44b77b7f"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesStreamingToolLifecycleTests.swift",
+      "sha256": "d63dcba1852c1d549d331afb0d9f8507ed46eee6cfe8423c2dd2b802e1835886"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesTestSupport.swift",
+      "sha256": "0ad55e01edc94f44b72736974b76e2ca960ddddd8888a630a7ebc7db3921067d"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesToolOptionsAndApprovalConversionTests.swift",
+      "sha256": "2958e10ba1bca6b4bfba62216be669a3ed7ee97130089a4195348a44ec2f8b03"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesToolPreparationTests.swift",
+      "sha256": "9e9c3e2f8b902f7ae4e4aad8120c90b48783636c0c76229ead8b41bcb382e5b2"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesToolResultContentConversionTests.swift",
+      "sha256": "a021d6552ca552f8102c742cd4840c69a0e73c53bd538ea5e5f9334215d4e57c"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesToolSearchConversionTests.swift",
+      "sha256": "a3cad0c37c1d1ba994369901d5592886b9fa981b7212967d0190151f0fabf7b4"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/ProviderStreamingRetryTests.swift",
+      "sha256": "7ee980e4babc98636480d883dd4fac66d4c41fcf100435b4ed2543244a19054c"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/RealtimeTestSupport.swift",
+      "sha256": "dff33532f22a18954e1c07cea5773240de9c14a2589b195b4b8f5ca744fbce20"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/TestSupport.swift",
+      "sha256": "0c63af58f11660c292ee11a6803ff6cb539a3442ba322ee0d20a74ac058d83d7"
+    }
+  ]
+}
