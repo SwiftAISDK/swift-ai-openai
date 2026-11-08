@@ -1,5 +1,5 @@
 <!-- Generated distribution; edit the canonical repository. -->
-# swift-ai-openai 1.1.0
+# swift-ai-openai 1.2.0
 
 Independent Swift-native port of Vercel AI SDK. Source and upstream dispositions are in PROVENANCE.json and Porting/.
 
@@ -8,7 +8,7 @@ Independent Swift-native port of Vercel AI SDK. Source and upstream dispositions
 Add this package to your SwiftPM dependencies:
 
 ```swift
-.package(url: "https://github.com/SwiftAISDK/swift-ai-openai.git", from: "1.1.0")
+.package(url: "https://github.com/SwiftAISDK/swift-ai-openai.git", from: "1.2.0")
 ```
 
 Products: `SwiftAIOpenAI`.
@@ -73,3 +73,6 @@ provider factory for application code.
 
 Licensed under Apache-2.0; see LICENSE. Vercel names identify provenance, not
 affiliation. Contribute through the canonical SwiftAISDK repository. Distribution repositories are generated from it.
+
+Original public initializer and helper signatures remain available for typed
+function references, alongside the extended APIs. Their original defaults are preserved.
