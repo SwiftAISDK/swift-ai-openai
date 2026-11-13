@@ -3,17 +3,18 @@
   "packages": [
     {
       "name": "@ai-sdk/openai",
-      "reviewedVersion": "4.0.111",
+      "reviewedVersion": "4.0.117",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.openAI`, `OpenAICompatible*Model`, `OpenAITools`, `OpenAI*Tests.swift`, `FileAndSkillClientTests.swift`, `CoreOpenAIUpstream202609Tests.swift`, `OpenAIResponsesBatchV4UpstreamTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json",
+      "evidence": "`AIProviders.openAI`, `OpenAICompatible*Model`, `OpenAITools`, `OpenAI*Tests.swift`, `FileAndSkillClientTests.swift`, `CoreOpenAIUpstream202609Tests.swift`, `OpenAIResponsesBatchV4UpstreamTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json; 2026-11-14 delta: Docs/WeeklyUpstreamAudit20261114.json",
       "reviewStatus": "imported-reviewed-with-gaps",
-      "archiveIntegrity": "sha512-r6aLB/7MlBlD4c/Ep7oAam7NbEDzShFXAmz68DyFj+JTIPvWR6Il8mPI2yw82kCtxeXLbL48dW+8p/IQANKoWQ==",
-      "sourceRef": "npm:@ai-sdk/openai@4.0.111",
-      "testRef": "0f3a85f92d1ce06ccde01d662407ef83e097a712",
+      "archiveIntegrity": "sha512-iRa4elI5AtKfzeOsuFwMS71Oga9MMOP1A15IYFBQL0dC3q+hvMxp02ytNOBZvk+E9zh7IvHyr0rLmC8uISDVig==",
+      "sourceRef": "npm:@ai-sdk/openai@4.0.117",
+      "testRef": "8bc7652cdb13fc84722666eb93f45acd0d131eee",
       "testRefRelationship": "matching-release",
       "contractFamilies": [
         "DecisionModelV4",
         "EmbeddingModelV4",
+        "ExtractionModelV4",
         "ImageModelV4",
         "LanguageModelV4",
         "ProviderV4",
@@ -22,7 +23,7 @@
         "SpeechTranslationModelV4",
         "TranscriptionModelV4"
       ],
-      "contractReview": "2026-11-08: published declarations/source and exact matching-release changed tests reviewed; native implementations, per-file dispositions and broader retained gaps are recorded in Docs/WeeklyUpstreamAudit20261108.json. Reviewed delta is not full-package or live-service parity."
+      "contractReview": "2026-11-14: verified published source/declarations and exact matching-release changed tests reviewed separately; native ports, per-file dispositions and retained gaps are recorded in Docs/WeeklyUpstreamAudit20261114.json. Delta review is not full-package or live-service parity."
     }
   ]
 }

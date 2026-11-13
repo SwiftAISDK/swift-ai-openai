@@ -1,46 +1,47 @@
 {
   "schemaVersion": 1,
   "package": "swift-ai-openai",
-  "version": "1.2.0",
-  "releaseID": "weekly-upstream-20261108",
+  "version": "1.3.0",
+  "releaseID": "weekly-upstream-20261114",
   "source": {
-    "commit": "8e233ff96fb809445aff9a5c06bb6149a24b94da",
-    "baseCommit": "8e233ff96fb809445aff9a5c06bb6149a24b94da",
+    "commit": "07fbf86b82d83d9724bd03622e9e87e74395286f",
+    "baseCommit": "07fbf86b82d83d9724bd03622e9e87e74395286f",
     "workingTree": false,
-    "inputsSHA256": "987359720075cb67dd8bc45bdc049aee4c5d5a42b67a7eb148e697ce5d18bd77"
+    "inputsSHA256": "63e472c0fe891cb7636d225e1c6467e4761dc3721be68081f2afa9f0b656bb29"
   },
   "dependencies": [
     {
       "package": "swift-ai-core",
-      "from": "1.3.0"
+      "from": "1.4.0"
     },
     {
       "package": "swift-ai-openai-compatible",
-      "from": "1.2.0"
+      "from": "1.3.0"
     }
   ],
   "changes": [
     {
-      "id": "weekly-upstream-20261108",
-      "notes": "Add tunnel configuration and timing/word/metadata support; correct Chat/Responses/refusal/tool/image behavior. Reviewed published upstream delta: @ai-sdk/openai 4.0.106 to 4.0.111. Validation passed: node Scripts/test-packages.mjs (all 52 owning packages plus the complete local facade; 3,965 reported tests and 33 explicit live skips); node Scripts/sdk.mjs dev test; node Scripts/sdk.mjs generate --check; node --test Scripts/tests/*.test.cjs (27 passed); core/provider isolation and version resolution; 52 deterministic package exports, 106 catalog consumers and four additional exact retained-minimum graphs; docs-site install/check/build (100 pages); git diff --check. No paid live-service calls were run. The publication pipeline requires successful Swift 6.3.3 CI at the exact canonical source before publishing.",
-      "compatibility": "Minor release for additive native functionality under the project convention. Existing call sites and exact old selectors are retained. Direct minimums change only for concrete API use or required inherited behavior. Version-delta review does not establish full-package parity or live-service acceptance. Updated direct ranges: swift-ai-core 1.2.0 to 1.3.0, swift-ai-openai-compatible 1.1.0 to 1.2.0."
+      "id": "weekly-upstream-20261114",
+      "notes": "Add typed extraction through Responses. Preserve initial and historical text-format/reasoning/tool updates, compact parallel-call metadata and cache-comparison diagnostics across unary, streaming and batch results. Redact provider tool credentials only in telemetry copies; image/mask/markup downloads use unauthenticated configured transport. Reviewed npm delta: @ai-sdk/openai 4.0.111 to 4.0.117. Validation: `node Scripts/test-packages.mjs` passed all 52 owning suites and 1731 facade tests; tooling 27/27, generation/isolation checks, standalone exports and 106 minimum/latest consumers, documentation check and 101-page build passed. Publication requires green exact-source Swift 6.3.3 CI. Paid/live verification and full-package parity are not claimed.",
+      "compatibility": "Additive native APIs or capabilities under the project minor-release convention. npm baselines and Swift SemVer are independent; this reviewed delta does not establish full-package or live-service parity. Required direct minimums: swift-ai-core 1.3.0 to 1.4.0, swift-ai-openai-compatible 1.2.0 to 1.3.0."
     }
   ],
   "canonicalDirectory": "Packages/swift-ai-openai",
   "upstream": [
     {
       "name": "@ai-sdk/openai",
-      "reviewedVersion": "4.0.111",
+      "reviewedVersion": "4.0.117",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.openAI`, `OpenAICompatible*Model`, `OpenAITools`, `OpenAI*Tests.swift`, `FileAndSkillClientTests.swift`, `CoreOpenAIUpstream202609Tests.swift`, `OpenAIResponsesBatchV4UpstreamTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json",
+      "evidence": "`AIProviders.openAI`, `OpenAICompatible*Model`, `OpenAITools`, `OpenAI*Tests.swift`, `FileAndSkillClientTests.swift`, `CoreOpenAIUpstream202609Tests.swift`, `OpenAIResponsesBatchV4UpstreamTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json; 2026-11-14 delta: Docs/WeeklyUpstreamAudit20261114.json",
       "reviewStatus": "imported-reviewed-with-gaps",
-      "archiveIntegrity": "sha512-r6aLB/7MlBlD4c/Ep7oAam7NbEDzShFXAmz68DyFj+JTIPvWR6Il8mPI2yw82kCtxeXLbL48dW+8p/IQANKoWQ==",
-      "sourceRef": "npm:@ai-sdk/openai@4.0.111",
-      "testRef": "0f3a85f92d1ce06ccde01d662407ef83e097a712",
+      "archiveIntegrity": "sha512-iRa4elI5AtKfzeOsuFwMS71Oga9MMOP1A15IYFBQL0dC3q+hvMxp02ytNOBZvk+E9zh7IvHyr0rLmC8uISDVig==",
+      "sourceRef": "npm:@ai-sdk/openai@4.0.117",
+      "testRef": "8bc7652cdb13fc84722666eb93f45acd0d131eee",
       "testRefRelationship": "matching-release",
       "contractFamilies": [
         "DecisionModelV4",
         "EmbeddingModelV4",
+        "ExtractionModelV4",
         "ImageModelV4",
         "LanguageModelV4",
         "ProviderV4",
@@ -49,7 +50,7 @@
         "SpeechTranslationModelV4",
         "TranscriptionModelV4"
       ],
-      "contractReview": "2026-11-08: published declarations/source and exact matching-release changed tests reviewed; native implementations, per-file dispositions and broader retained gaps are recorded in Docs/WeeklyUpstreamAudit20261108.json. Reviewed delta is not full-package or live-service parity."
+      "contractReview": "2026-11-14: verified published source/declarations and exact matching-release changed tests reviewed separately; native ports, per-file dispositions and retained gaps are recorded in Docs/WeeklyUpstreamAudit20261114.json. Delta review is not full-package or live-service parity."
     }
   ],
   "note": "Independent port. Imported test refs and contract review gaps retain their original status; export is not new upstream parity proof.",
@@ -72,11 +73,11 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/Porting/map.json",
-      "sha256": "63beeb98008fa2d6c47b2f6c8aea4578b14cf04d921407fb1e41842432f9137c"
+      "sha256": "c0fe14ef2f68dd7432c88b6bb60d68ecbc3f9775a10c7328be8d72e1f6505964"
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/README.md",
-      "sha256": "d746133c2225fadf175005309581079248177ce96084e10ff9b21c7f3c224901"
+      "sha256": "53fd9f76b0ebd433a4cdaf5569f9c6dfb8a65ff22eba6aca4ccce777afab13b1"
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAIAudioModels.swift",
@@ -84,11 +85,11 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAICompatibleMetadata.swift",
-      "sha256": "d965e655bf15b2cd5103016c361e1b69cf6ba69932389e47ede5b25bcedc9089"
+      "sha256": "7d9782d0e6ff07850c70c5aa82eb336e91049979344c069b5d40afea60288d27"
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAIConfiguration.swift",
-      "sha256": "3e143dc04763ecbf4ee8d08791ff5268852152878340701693c1b36bf60954f9"
+      "sha256": "e0f4d1e0c42a2f8d0083033d5ddbc2dbab770695ff086e66790a3e28badbac16"
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAIDecisionModel.swift",
@@ -112,11 +113,11 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAIProvider.swift",
-      "sha256": "c553e8f72d5eebb95929c41940839bbc4a23de79193271b25d790f6f4e5412dd"
+      "sha256": "66df3cda586062718cb960388cfb96445c8eddcbbd61a139644d0f0b2f35b3b7"
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAIResponsesBatchLanguageModel.swift",
-      "sha256": "bcbbc871822bc4e184516a1e3b229bba991bbdc5fa685f7b3864112ea71edbfe"
+      "sha256": "d7ee086ea25adc62436add239693542e05bbbd6b4c36ba20c4a70163fcebe61f"
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAIResponsesInput.swift",
@@ -124,15 +125,15 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAIResponsesModel.swift",
-      "sha256": "53c3ee6f01938a27696276e6c04a6095e549d5916dc03d1f998f68abc77dce89"
+      "sha256": "77551e1cc9bb949663805654edd226de06dd794e7056394acd9ebe9feb6a806c"
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAIResponsesOptions.swift",
-      "sha256": "dc0e1e64af58fba126dfe815f2ecd32703d42272a4463a6c34f4c1b7b232d782"
+      "sha256": "38af63ef27d1a1d11da4768145f9f579f09e1a9ce0da4e67e3f94edce3258d56"
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAIResponsesParallelToolCalls.swift",
-      "sha256": "2e51b8d69063dc2d3fabba6ad08a982254b9f4503ffd284072b4aa84d13103bf"
+      "sha256": "c4f21e210c1686d6ca0129cb3640316e23315c9d88f709d23489845fcdbaf0aa"
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAIResponsesParsing.swift",
@@ -141,6 +142,10 @@
     {
       "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAIResponsesStreaming.swift",
       "sha256": "a87398b98411b7eb17f984606b9df55171fad94155131b875240925fe2cd0070"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAIResponsesTextFormat.swift",
+      "sha256": "ff11be5f95f99232cc05d04d506fb5516a2cfe9dfa9769da5e415007623d15ff"
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAIResponsesTools.swift",
@@ -157,6 +162,10 @@
     {
       "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAIStreamingTranscription.swift",
       "sha256": "d33e6780d82a2fdd120d145ad425c78aec346f8f66c63cd82394e14100814d88"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAITelemetryRedaction.swift",
+      "sha256": "5ced7ea937909f6f8ff92f381c99bb513a9f5f24817f5f3c6f1d9c5b8867e2ad"
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAITools.swift",
@@ -284,7 +293,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIMediaTests.swift",
-      "sha256": "9e0b32c70c5233acf3ba415e15957943d26e77fc320976c48131f58ea3143d43"
+      "sha256": "004489502aaacd0363f9c1bc27d6af8575136748b458350fd9bcab5cfed17172"
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIProgrammaticAndForwardCompatibilityTests.swift",
@@ -292,7 +301,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesBatchV4UpstreamTests.swift",
-      "sha256": "38301c3db10bcaed69910fd5104a04c34202c99d27a0f7f1e63525612b4a95a7"
+      "sha256": "f7dfd9954037670467172b04e875b1abd887420758e3c6e5f1a25e906e7ec624"
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesComputerV4UpstreamTests.swift",
@@ -332,7 +341,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesMessageConversionTests.swift",
-      "sha256": "0ccfad02f5899403a5015012f5443d0f3220e8034d6b4c4d878adc8d089f128f"
+      "sha256": "f481f522376cab7bf724057fae68e0d3b697c18350393d5098499b47cfe19b75"
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesParallelToolCallTests.swift",
@@ -344,7 +353,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesProviderIdentityTests.swift",
-      "sha256": "6fc16d14e8d39ce06aad9363afeab1ed15a5a170f948ccf22077ec4d648750cb"
+      "sha256": "28b5e18bbff611011536b144bc1e6c6e864e570050ff2a36b936f869e9531fc0"
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesRequestOptionsAndReasoningTests.swift",
@@ -441,6 +450,22 @@
     {
       "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/Weekly20261108ResponseTests.swift",
       "sha256": "d35ab67dd6cefdaf3146eb2abf6db3a390c2fd047f8aa2c593c855feee622caf"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/Weekly20261114ExtractionTests.swift",
+      "sha256": "0f53afb17c743fa6416c513b8c0bee6ae750cd193dba5bd5fc0c2c30c7b136df"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/Weekly20261114HistoryTests.swift",
+      "sha256": "350ec37376f8e5f43a405be5b1424cc3ba1ed0660d0237d30f5088afafe5f023"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/Weekly20261114ResponsesTests.swift",
+      "sha256": "759b83d7737d349824541d38ebaa1e3eb314c349689a9f9a9f7762380e11b12f"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/Weekly20261114TelemetryTests.swift",
+      "sha256": "62e5514ee17972d032f3c3a28b9b6044e92bb70ebcaa2d76c5340c054520403f"
     }
   ]
 }

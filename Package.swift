@@ -10,8 +10,8 @@ let package = Package(
         .library(name: "SwiftAIOpenAI", targets: ["SwiftAIOpenAI"])
     ],
     dependencies: [
-        .package(url: "https://github.com/SwiftAISDK/swift-ai-core.git", from: "1.3.0"),
-        .package(url: "https://github.com/SwiftAISDK/swift-ai-openai-compatible.git", from: "1.2.0")
+        .package(url: "https://github.com/SwiftAISDK/swift-ai-core.git", from: "1.4.0"),
+        .package(url: "https://github.com/SwiftAISDK/swift-ai-openai-compatible.git", from: "1.3.0")
     ],
     targets: [
         .target(name: "SwiftAIOpenAI", dependencies: [.product(name: "SwiftAIProvider", package: "swift-ai-core"), .product(name: "SwiftAITransport", package: "swift-ai-core"), .product(name: "SwiftAIProviderUtilities", package: "swift-ai-core"), .product(name: "SwiftAIOpenAICompatible", package: "swift-ai-openai-compatible")]),
