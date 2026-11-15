@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "package": "swift-ai-openai",
-  "version": "1.3.0",
-  "releaseID": "weekly-upstream-20261114",
+  "version": "1.3.1",
+  "releaseID": "weekly-upstream-20261115",
   "source": {
-    "commit": "07fbf86b82d83d9724bd03622e9e87e74395286f",
-    "baseCommit": "07fbf86b82d83d9724bd03622e9e87e74395286f",
+    "commit": "1e543b35e0259a5bda888665dacf2d4a7f1bb0ed",
+    "baseCommit": "1e543b35e0259a5bda888665dacf2d4a7f1bb0ed",
     "workingTree": false,
-    "inputsSHA256": "63e472c0fe891cb7636d225e1c6467e4761dc3721be68081f2afa9f0b656bb29"
+    "inputsSHA256": "5508ffc6347bffaed13fb29409eb856df9a7796d3ebdcb6f623d1e8871b52999"
   },
   "dependencies": [
     {
@@ -21,22 +21,22 @@
   ],
   "changes": [
     {
-      "id": "weekly-upstream-20261114",
-      "notes": "Add typed extraction through Responses. Preserve initial and historical text-format/reasoning/tool updates, compact parallel-call metadata and cache-comparison diagnostics across unary, streaming and batch results. Redact provider tool credentials only in telemetry copies; image/mask/markup downloads use unauthenticated configured transport. Reviewed npm delta: @ai-sdk/openai 4.0.111 to 4.0.117. Validation: `node Scripts/test-packages.mjs` passed all 52 owning suites and 1731 facade tests; tooling 27/27, generation/isolation checks, standalone exports and 106 minimum/latest consumers, documentation check and 101-page build passed. Publication requires green exact-source Swift 6.3.3 CI. Paid/live verification and full-package parity are not claimed.",
-      "compatibility": "Additive native APIs or capabilities under the project minor-release convention. npm baselines and Swift SemVer are independent; this reviewed delta does not establish full-package or live-service parity. Required direct minimums: swift-ai-core 1.3.0 to 1.4.0, swift-ai-openai-compatible 1.2.0 to 1.3.0."
+      "id": "weekly-upstream-20261115",
+      "notes": "Align the versioned request identity with the reviewed published package while retaining native open String model IDs and existing request, response, option, error, stream and telemetry behavior. Derived TypeScript model-ID/catalog reorganizations preserve the existing native runtime policies. Reviewed npm delta: @ai-sdk/openai 4.0.117 to 4.0.118. Validation passed: node Scripts/test-packages.mjs (55 owning packages, 2451 owning tests and 1736 compatibility tests), generation checks, 27 tooling tests, isolation/version checks, deterministic exports and minimum-dependency consumers. Documentation check/build passed (104 pages). Publication is gated by exact-source Swift 6.3.3 CI; subsequent public refs and clients are recorded in Docs/ReleaseVerification20261115.json. Paid/live-service checks were not run; this delta does not claim full-package parity.",
+      "compatibility": "Compatible versioned request identity correction; existing public selectors and dependency minimums remain. npm baselines and Swift SemVer are independent."
     }
   ],
   "canonicalDirectory": "Packages/swift-ai-openai",
   "upstream": [
     {
       "name": "@ai-sdk/openai",
-      "reviewedVersion": "4.0.117",
+      "reviewedVersion": "4.0.118",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.openAI`, `OpenAICompatible*Model`, `OpenAITools`, `OpenAI*Tests.swift`, `FileAndSkillClientTests.swift`, `CoreOpenAIUpstream202609Tests.swift`, `OpenAIResponsesBatchV4UpstreamTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json; 2026-11-14 delta: Docs/WeeklyUpstreamAudit20261114.json",
+      "evidence": "`AIProviders.openAI`, `OpenAICompatible*Model`, `OpenAITools`, `OpenAI*Tests.swift`, `FileAndSkillClientTests.swift`, `CoreOpenAIUpstream202609Tests.swift`, `OpenAIResponsesBatchV4UpstreamTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json; 2026-11-14 delta: Docs/WeeklyUpstreamAudit20261114.json; 2026-11-15 delta: Docs/WeeklyUpstreamAudit20261115.json",
       "reviewStatus": "imported-reviewed-with-gaps",
-      "archiveIntegrity": "sha512-iRa4elI5AtKfzeOsuFwMS71Oga9MMOP1A15IYFBQL0dC3q+hvMxp02ytNOBZvk+E9zh7IvHyr0rLmC8uISDVig==",
-      "sourceRef": "npm:@ai-sdk/openai@4.0.117",
-      "testRef": "8bc7652cdb13fc84722666eb93f45acd0d131eee",
+      "archiveIntegrity": "sha512-pBsFeB+IudrX96P0ic9AO/1NPnfB6IyoS2B2pnhBJ/Ovt4bsvAmBOPeUxwEfYbQyfetJdVFep9sfYX42uVX3SQ==",
+      "sourceRef": "npm:@ai-sdk/openai@4.0.118",
+      "testRef": "0e8e0543aeda7d4dd4ce6eade0d5b7d5a43644c1",
       "testRefRelationship": "matching-release",
       "contractFamilies": [
         "DecisionModelV4",
@@ -50,7 +50,7 @@
         "SpeechTranslationModelV4",
         "TranscriptionModelV4"
       ],
-      "contractReview": "2026-11-14: verified published source/declarations and exact matching-release changed tests reviewed separately; native ports, per-file dispositions and retained gaps are recorded in Docs/WeeklyUpstreamAudit20261114.json. Delta review is not full-package or live-service parity."
+      "contractReview": "2026-11-15: published source/declarations and exact matching-release tests reviewed separately. Native delta scenarios, per-file dispositions, unchanged-catalog evidence and explicit remaining gaps are recorded in Docs/WeeklyUpstreamAudit20261115.json. Required checks remain a separate gate; no full-package/live-service parity claim."
     }
   ],
   "note": "Independent port. Imported test refs and contract review gaps retain their original status; export is not new upstream parity proof.",
@@ -73,7 +73,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/Porting/map.json",
-      "sha256": "c0fe14ef2f68dd7432c88b6bb60d68ecbc3f9775a10c7328be8d72e1f6505964"
+      "sha256": "e22bc9ae4105a63bdfade64d90db65af740b71e28ed3e9daeb0f05cfaedb98e0"
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/README.md",
@@ -113,7 +113,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAIProvider.swift",
-      "sha256": "66df3cda586062718cb960388cfb96445c8eddcbbd61a139644d0f0b2f35b3b7"
+      "sha256": "63cf8ae8cb03b6ec1f6235bb019e918818421d610591a561469731dbc2f8d97b"
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/Sources/SwiftAIOpenAI/OpenAIResponsesBatchLanguageModel.swift",
@@ -293,7 +293,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIMediaTests.swift",
-      "sha256": "004489502aaacd0363f9c1bc27d6af8575136748b458350fd9bcab5cfed17172"
+      "sha256": "9bb676831b8ab54fddcec5c83bd4645d58b37c550441793350b15b2595392e77"
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIProgrammaticAndForwardCompatibilityTests.swift",
@@ -341,7 +341,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesMessageConversionTests.swift",
-      "sha256": "f481f522376cab7bf724057fae68e0d3b697c18350393d5098499b47cfe19b75"
+      "sha256": "e27e04963ea955d5feaeb8d4ee9d4b57e7f9dd765ee1508b714a50e147269ab1"
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesParallelToolCallTests.swift",
@@ -353,7 +353,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesProviderIdentityTests.swift",
-      "sha256": "28b5e18bbff611011536b144bc1e6c6e864e570050ff2a36b936f869e9531fc0"
+      "sha256": "2b8f68b33356c8dd5c5d1f634f428e94d724d960746c440433c67f3449dc12a8"
     },
     {
       "canonicalPath": "Packages/swift-ai-openai/Tests/SwiftAIOpenAITests/OpenAIResponsesRequestOptionsAndReasoningTests.swift",
