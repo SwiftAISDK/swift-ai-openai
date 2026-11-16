@@ -10,7 +10,7 @@ let package = Package(
         .library(name: "SwiftAIOpenAI", targets: ["SwiftAIOpenAI"])
     ],
     dependencies: [
-        .package(url: "https://github.com/SwiftAISDK/swift-ai-core.git", from: "1.4.0"),
+        .package(url: "https://github.com/SwiftAISDK/swift-ai-core.git", from: "1.6.0"),
         .package(url: "https://github.com/SwiftAISDK/swift-ai-openai-compatible.git", from: "1.3.0")
     ],
     targets: [

@@ -123,6 +123,8 @@
       "Tests/SwiftAIOpenAITests/OpenAIResponsesToolPreparationTests.swift",
       "Tests/SwiftAIOpenAITests/OpenAIResponsesToolResultContentConversionTests.swift",
       "Tests/SwiftAIOpenAITests/OpenAIResponsesToolSearchConversionTests.swift",
+      "Tests/SwiftAIOpenAITests/ParityOpenAIChatTests.swift",
+      "Tests/SwiftAIOpenAITests/ParityOpenAIResponsesTests.swift",
       "Tests/SwiftAIOpenAITests/ProviderStreamingRetryTests.swift",
       "Tests/SwiftAIOpenAITests/RealtimeTestSupport.swift",
       "Tests/SwiftAIOpenAITests/TestSupport.swift",
